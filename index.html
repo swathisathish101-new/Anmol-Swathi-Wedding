@@ -1,91 +1,387 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Anmol & Swathi — Wedding</title>
-  <meta name="description" content="Anmol & Swathi — From Office Desk to 'I Do' — Harsha The Fern, Shivamogga — 6-8 Feb 2026" />
+  <meta name="description"
+    content="Anmol & Swathi — From Office Desk to 'I Do' — Harsha The Fern, Shivamogga — 6-8 Feb 2026" />
   <style>
-    :root{
-      --bg:#fff8f2; --accent:#d4af37; --muted:#6b6b6b; --card:#ffffff; --pastel:#f6f2ff;
-      --maxw:1100px;
-      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    :root {
+      --bg: #fff8f2;
+      --accent: #d4af37;
+      --muted: #6b6b6b;
+      --card: #ffffff;
+      --pastel: #fff7e6;
+      --maxw: 1100px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#fff 0%,var(--bg) 100%);color:#222}
-    .container{max-width:var(--maxw);margin:24px auto;padding:20px}
-    header{display:flex;align-items:center;gap:18px}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{width:84px;height:84px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,#fff,rgba(212,175,55,0.08));box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-    h1{font-size:22px;margin:0}
-    .subtitle{color:var(--muted);font-size:14px}
 
-    .hero{display:grid;grid-template-columns:1fr 380px;gap:24px;margin-top:20px}
-    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,0.06)}
-    .intro p{margin:0 0 12px 0}
+    * {
+      box-sizing: border-box
+    }
 
-    .events{display:flex;flex-direction:column;gap:12px}
-    .event{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;background:linear-gradient(90deg,rgba(212,175,55,0.03),transparent)}
-    .event .left{font-weight:600}
-    .venue{margin-top:12px}
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url("photo.jpg") center/cover no-repeat;
+      opacity: 0.25;
+      /* fade level */
+      z-index: -1;
+      pointer-events: none;
+    }
 
-    .story{margin-top:18px;padding:16px;border-radius:10px;background:var(--pastel)}
+    .container {
+      max-width: var(--maxw);
+      margin: 24px auto;
+      padding: 20px
+    }
 
-    .rsvp-form{display:flex;flex-direction:column;gap:10px}
-    label{font-size:13px;color:var(--muted)}
-    input,select,textarea{padding:10px;border-radius:8px;border:1px solid #eee;font-size:15px}
-    .btn{display:inline-block;padding:12px 16px;border-radius:10px;background:var(--accent);color:white;font-weight:600;border:0;cursor:pointer}
+    header {
+      display: flex;
+      align-items: center;
+      gap: 18px
+    }
 
-    footer{margin-top:30px;text-align:center;color:var(--muted);font-size:13px}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px
+    }
+
+    .logo {
+      width: 84px;
+      height: 84px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #fff, rgba(212, 175, 55, 0.08));
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06)
+    }
+
+    h1 {
+      font-size: 22px;
+      margin: 0
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 24px;
+      margin-top: 20px
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.55);
+      /* reduced white */
+      backdrop-filter: blur(8px);
+      /* glass effect */
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 16px 16px 16px 24px;
+      /* top right bottom left */
+    }
+
+
+    .intro p {
+      margin: 0 0 12px 0
+    }
+
+    .events {
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .event {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.03), transparent)
+    }
+
+    .event .left {
+      font-weight: 600
+    }
+
+    .venue {
+      margin-top: 12px
+    }
+
+    .story {
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 10px;
+      background: transparent;
+    }
+
+    .rsvp-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .rsvp-form div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 14px;
+      /* space between each field */
+    }
+
+    .rsvp-form label {
+      margin-bottom: 6px;
+      /* space between label and input */
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .rsvp-form input,
+    .rsvp-form select,
+    .rsvp-form textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-size: 15px;
+      transition: all 0.2s ease;
+    }
+
+    .rsvp-form input:focus,
+    .rsvp-form select:focus,
+    .rsvp-form textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 6px rgba(212, 175, 55, 0.3);
+    }
+
+
+    label {
+      font-size: 13px;
+      color: var(--muted)
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      font-size: 15px
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 16px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+      border: 0;
+      cursor: pointer
+    }
+
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px
+    }
 
     /* Responsive */
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
+    @media (max-width:900px) {
+      .hero {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media (max-width: 768px) {
+      .monogram-block {
+        display: none;
+      }
     }
 
     /* small logo typography */
-    .monogram{font-weight:700;color:var(--accent);font-size:22px;letter-spacing:1px}
+    .monogram {
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 22px;
+      letter-spacing: 1px
+    }
 
-    .hashtag{color:var(--muted);font-weight:600}
+    .hashtag {
+      color: var(--muted);
+      font-weight: 600
+    }
 
-    .map{width:100%;height:220px;border-radius:8px;border:0}
+    .map {
+      width: 100%;
+      height: 220px;
+      border-radius: 8px;
+      border: 0
+    }
 
-    .success{padding:12px;border-radius:8px;background:#e8f9ed;color:#04662d}
+    .success {
+      padding: 12px;
+      border-radius: 8px;
+      background: #e8f9ed;
+      color: #04662d
+    }
+
+    .event-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .event-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      border-left: 6px solid var(--accent);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .event-card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .event-card h4 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .event-meta {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.4;
+      font-weight: bold;
+    }
+
+    .event-tag {
+      font-size: 13px;
+      font-weight: 600;
+      color: #b37e10;
+      margin-top: -6px;
+    }
+
+    .card.intro {
+      padding: 16px 16px 16px 24px;
+      /* top right bottom left */
+    }
+
+    .photo-section {
+      margin-top: 40px;
+    }
+
+    .photo-header {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      color: black;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
+
+    .photo-strip {
+      width: 100%;
+      overflow: hidden;
+      padding: 16px 0;
+    }
+
+    .photo-track {
+      display: flex;
+      gap: 16px;
+      animation: scrollLoop 60s linear infinite;
+    }
+
+    .photo-track img {
+      height: 160px;
+      width: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes scrollLoop {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+
+      /* works now because width is full */
+    }
+
+
+    /* Mobile speed adjustment */
+    @media (max-width: 768px) {
+      .photo-track {
+        animation-duration: 40s;
+      }
+
+      .photo-track img {
+        height: 120px;
+        width: 180px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
       <div class="brand">
         <div class="logo" aria-hidden="true">
           <!-- Simple SVG monogram: A + S with wheat and lotus accents -->
-            <img src="wedding-logo.jpg" alt="Anmol & Swathi Wedding Logo" style="width:70px;height:70px;object-fit:contain;">            <defs>
-              <linearGradient id="g" x1="0" x2="1">
-                <stop offset="0" stop-color="#fff" />
-                <stop offset="1" stop-color="#f8efdb" />
-              </linearGradient>
-            </defs>
-            <rect width="64" height="64" rx="12" fill="url(#g)" />
-            <g transform="translate(8,8)" fill="none" stroke="#b37e10" stroke-width="2">
-              <path d="M6 30 C14 10, 30 10, 34 30" stroke-linecap="round" />
-              <path d="M12 4 C14 8, 20 8, 22 4" stroke-linecap="round" />
-            </g>
-            <!-- stylized A S letters -->
-            <!-- <text x="18" y="44" font-family="Georgia, serif" font-weight="700" font-size="22" fill="#b37e10">A</text>
+          <img src="wedding-logo.jpg" alt="Anmol & Swathi Wedding Logo"
+            style="width:70px;height:70px;object-fit:contain;">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#fff" />
+              <stop offset="1" stop-color="#f8efdb" />
+            </linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="12" fill="url(#g)" />
+          <g transform="translate(8,8)" fill="none" stroke="#b37e10" stroke-width="2">
+            <path d="M6 30 C14 10, 30 10, 34 30" stroke-linecap="round" />
+            <path d="M12 4 C14 8, 20 8, 22 4" stroke-linecap="round" />
+          </g>
+          <!-- stylized A S letters -->
+          <!-- <text x="18" y="44" font-family="Georgia, serif" font-weight="700" font-size="22" fill="#b37e10">A</text>
             <text x="30" y="44" font-family="Georgia, serif" font-weight="700" font-size="22" fill="#b37e10">S</text> -->
-            <!-- small lotus shape -->
-            <path d="M32 14 C34 18, 38 18, 40 14 C36 12, 34 10, 32 14 Z" fill="#f7e7d0" opacity="0.9"/>
+          <!-- small lotus shape -->
+          <path d="M32 14 C34 18, 38 18, 40 14 C36 12, 34 10, 32 14 Z" fill="#f7e7d0" opacity="0.9" />
           </svg>
         </div>
         <div>
           <h1>Anmol &amp; Swathi</h1>
-          <div>A Journey From Workdays to Wedding Days</div> 
-          <div class="subtitle">6–8 Feb, 2026 · Harsha The Fern, Shivamogga</div>
+          <div>6–8 Feb, 2026 · Harsha The Fern, Shivamogga</div>
+          <div><strong>#TwoStatesOneHeart #LoveBeyondBoundaries</strong></div>
+
         </div>
       </div>
-      <div style="margin-left:auto;text-align:right">
+      <div class="monogram-block" style="margin-left:auto;text-align:right">
         <div class="monogram">A • S</div>
-        <div class="hashtag">#AnmolKiSwathi</div>
       </div>
     </header>
 
@@ -93,60 +389,54 @@
       <section>
         <div class="card intro">
           <h2 style="margin-top:0">You're Invited</h2>
-          <p>With joy in our hearts, we invite you to celebrate our wedding. Below are the events and details — we hope to see you there!</p>
+          <p>With joy in our hearts, we invite you to celebrate our wedding. Below are the events and details — we hope
+            to see you there!</p>
 
           <div class="story">
             <strong>A Peek Into Our Love Story ❤️</strong>
-            <p style="margin-top:8px">It all started in a quiet corner of corporate life. Was it love at first sight? Nah. But did it feel like every moment, every coffee break, every shared laugh was leading us here? Absolutely. It was the kind of connection that felt less like a spark and more like a warm, comforting truth—it was always meant to be.</p>
-            <p style="margin-top:8px">Meet the dynamic duo: A rugged Haryanvi Chhorra and a graceful Kannadathi. Yes, we know, it sounds a little bit like the sequel to 2 States, but this one is ours—and it's so much sweeter! We are the living proof that a shared table of Jowar Roti and Saag alongside Masala Dosa and Filter Coffee is the perfect recipe for forever.</p>
-            <p style="margin-top:8px">Join us as we prove that love truly knows no boundaries—and that our blend of North and South is the most delicious one yet!</p>
+            <p style="margin-top:8px">It all started in a quiet corner of corporate life. Was it love at first sight?
+              Nah. But did it feel like every moment, every coffee break, every shared laugh was leading us here?
+              Absolutely. It was the kind of connection that felt less like a spark and more like a warm, comforting
+              truth—it was always meant to be.</p>
+            <p style="margin-top:8px">Meet the dynamic duo: A rugged Haryanvi Chhorra and a graceful Kannadathi. Yes, we
+              know, it sounds a little bit like the sequel to 2 States, but this one is ours—and it's so much sweeter!
+              We are the living proof that a shared table of Jowar Roti and Saag alongside Masala Dosa and Filter Coffee
+              is the perfect recipe for forever.</p>
+            <p style="margin-top:8px">Join us as we prove that love truly knows no boundaries—and that our blend of
+              North and South is the most delicious one yet!</p>
           </div>
 
-          <h3 style="margin-top:14px">Events &amp; Schedule</h3>
-          <div class="events">
-            <div class="event">
-              <div class="left">Mehendi</div>
-              <div class="right">6th Feb, 2026 · Home</div>
-            </div>
-            <div class="event">
-              <div class="left">Haldi</div>
-              <div class="right">7th Feb, 2026 · 10:30 AM · Harsha The Fern</div>
-            </div>
-            <div style="margin:-8px 0 8px 0; padding-left:8px; color:#b37e10; font-size:13px; font-weight:600;">
-              Dress Code: Yellow / Mustard
-            </div>
-            <div class="event">
-              <div class="left">Bale Shastra</div>
-              <div class="right">7th Feb, 2026 · 3:00 PM · Harsha The Fern</div>
-            </div>
-            <div style="margin:-8px 0 8px 0; padding-left:8px; color:#b37e10; font-size:13px; font-weight:600;">
-              Dress Code: Traditional Elegance
-            </div>
-            <div class="event">
-              <div class="left">Engagement + Sangeeth</div>
-              <div class="right">7th Feb, 2026 · 6:00 PM · Harsha The Fern</div>
-            </div>
-            <div style="margin:-8px 0 8px 0; padding-left:8px; color:#b37e10; font-size:13px; font-weight:600;">
-              Evening Attire: Sparkle & Shine
-            </div>
-            <div class="event">
-              <div class="left">Wedding</div>
-              <div class="right">8th Feb, 2026 · 10:00 AM · Harsha The Fern</div>
-            </div>
-            <div style="margin:-8px 0 8px 0; padding-left:8px; color:#b37e10; font-size:13px; font-weight:600;">
-              Dress Code: Saree, Dhoti, Panche vibes—optional but lovely
-            </div>
-          </div>
+          <h3 style="margin-top:14px">Events & Schedule</h3>
 
-          <div class="card venue" style="margin-top:12px">
-            <h4 style="margin:0 0 8px 0">Venue</h4>
-            <div style="color:var(--muted);font-size:14px">Harsha The Fern Shivamogga<br>Harsha International, 35/2A, Sagara Road, opposite Sharavathi Dental College, Shivamogga, Karnataka 577205</div>
-            <div style="margin-top:10px">
-              <!-- Google Maps embed using address query -->
-              <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=Harsha+International+35/2A+Sagara+Road+opposite+Sharavathi+Dental+College+Shivamogga+Karnataka+577205&output=embed">
-              </iframe>
+          <div class="event-cards">
+
+            <div class="event-card">
+              <img src="Mehendi.png" alt="Mehendi">
+              <h4>Mehendi</h4>
+              <div class="event-meta">6th Feb, 2026 · Bride's Residence</div>
             </div>
+
+            <div class="event-card">
+              <img src="Haldi.png" alt="Haldi">
+              <h4>Haldi</h4>
+              <div class="event-meta">7th Feb, 2026 · 10:30 AM · Harsha The Fern</div>
+              <div class="event-tag">Dress Code: Yellow / Mustard</div>
+            </div>
+
+            <div class="event-card">
+              <img src="Engagement.png" alt="Engagement & Sangeeth">
+              <h4>Engagement + Sangeeth</h4>
+              <div class="event-meta">7th Feb, 2026 · 6:00 PM · Harsha The Fern</div>
+              <div class="event-tag">Evening Attire: Sparkle & Shine</div>
+            </div>
+
+            <div class="event-card">
+              <img src="Wedding.png" alt="Wedding">
+              <h4>Wedding</h4>
+              <div class="event-meta">8th Feb, 2026 · 10:00 AM · Harsha The Fern</div>
+              <div class="event-tag">Dress Code: Saree, Dhoti, Panche vibes</div>
+            </div>
+
           </div>
 
         </div>
@@ -166,55 +456,62 @@
       <aside>
         <div class="card">
           <h3 style="margin-top:0">RSVP</h3>
-          <p style="margin-top:0;color:var(--muted)">Please confirm your attendance. (We will use this to plan meals & seating.)</p>
+          <p style="margin-top:0;color:var(--muted)">Please confirm your attendance. (We will use this to plan meals &
+            seating.)</p>
 
-<form id="rsvp" class="rsvp-form" method="POST" action="https://script.google.com/macros/s/AKfycbw7X5ZWJCteyz0dUjh7iJMgA7bCEd5G4Tk0_onxGyaf4ke_LeTNLN6FxfPKd9xW3e3YzA/exec" target="hidden_iframe">
-  <div>
-    <label for="name">Full name</label>
-    <input id="name" name="name" required />
-  </div>
-  <div>
-    <label for="guests">Number of guests (including you)</label>
-    <select id="guests" name="guests" required>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5+</option>
-    </select>
-  </div>
-  <div>
-    <label for="arrival">Date of arrival</label>
-    <input id="arrival" name="arrival" type="date" />
-  </div>
-  <div>
-    <label for="departure">Date of departure</label>
-    <input id="departure" name="departure" type="date" />
-  </div>
-  <div>
-    <label for="message">Message (optional)</label>
-    <textarea id="message" name="message" rows="3" placeholder="Any dietary requirements or notes"></textarea>
-  </div>
+          <form id="rsvp" class="rsvp-form" method="POST"
+            action="https://script.google.com/macros/s/AKfycbw7X5ZWJCteyz0dUjh7iJMgA7bCEd5G4Tk0_onxGyaf4ke_LeTNLN6FxfPKd9xW3e3YzA/exec"
+            target="hidden_iframe">
+            <div>
+              <label for="name">Full name</label>
+              <input id="name" name="name" required />
+            </div>
+            <div>
+              <label for="guests">Number of guests</label>
+              <select id="guests" name="guests" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5+</option>
+              </select>
+            </div>
+            <div>
+              <label for="arrival">Date of arrival</label>
+              <input id="arrival" name="arrival" type="date" />
+            </div>
+            <div>
+              <label for="departure">Date of departure</label>
+              <input id="departure" name="departure" type="date" />
+            </div>
+            <div>
+              <label for="message">Message (optional)</label>
+              <textarea id="message" name="message" rows="1"></textarea>
+            </div>
 
-  <button class="btn" type="submit">Send RSVP</button>
-</form>
+            <button class="btn" type="submit">Confirm RSVP</button>
+          </form>
 
-<iframe name="hidden_iframe" style="display:none;"></iframe>
+          <div class="card venue" style="margin-top:12px">
+            <h4 style="margin:0 0 8px 0">Venue</h4>
+            <div style="color:var(--muted);font-size:14px">Harsha The Fern Shivamogga<br>Harsha International, 35/2A,
+              Sagara Road, opposite Sharavathi Dental College, Shivamogga, Karnataka 577205</div>
+            <div style="margin-top:10px">
+              <!-- Google Maps embed using address query -->
+              <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Harsha+International+35/2A+Sagara+Road+opposite+Sharavathi+Dental+College+Shivamogga+Karnataka+577205&output=embed">
+              </iframe>
+            </div>
+          </div>
 
 
-          <hr style="margin:14px 0"/>
-          <div style="font-size:13px;color:var(--muted)">Want automatic RSVP capture? Two options are in the README below:</div>
-          <ul style="color:var(--muted);font-size:13px;padding-left:18px;margin:8px 0">
-            <li>Use <strong>Formspree</strong> — replace the form POST endpoint with your Formspree URL (quick).</li>
-            <li>Use <strong>Google Sheets + Apps Script</strong> — follow the steps in the README to connect RSVPs to a Sheet.</li>
-          </ul>
         </div>
 
-        <div style="margin-top:12px" class="card">
+        <!-- <div style="margin-top:12px" class="card">
           <h4 style="margin:0 0 8px 0">Hashtag & Details</h4>
-          <div style="font-weight:600">#AnmolKaSwathi</div>
+          <div style="font-weight:600">#AnmolKiSwathi</div>
           <p style="margin:6px 0;color:var(--muted)">Colors: gold &amp; white with pastel accents. Logo: "A S" monogram with wheat &amp; lotus motif (embedded in top-left).</p>
-        </div>
+        </div> -->
 
       </aside>
     </main>
@@ -223,11 +520,74 @@
 
   <script>
 
-    function showStatus(msg, type){
+    function showStatus(msg, type) {
       const el = document.getElementById('rsvpStatus');
-      el.innerHTML = `<div class="${type==='ok'?'success':''}">${msg}</div>`;
-      setTimeout(()=>{ if(document.getElementById('rsvpStatus')) document.getElementById('rsvpStatus').innerHTML=''; },7000);
+      el.innerHTML = `<div class="${type === 'ok' ? 'success' : ''}">${msg}</div>`;
+      setTimeout(() => { if (document.getElementById('rsvpStatus')) document.getElementById('rsvpStatus').innerHTML = ''; }, 7000);
     }
   </script>
 </body>
+
+<div class="photo-section">
+  <h3 class="photo-header">Snapshots of Our Journey❤️</h3>
+  <div class="photo-strip">
+    <div class="photo-track" id="photoTrack">
+      <img src="photo1.jpg" alt="Couple Photo 1">
+      <img src="photo2.jpg" alt="Couple Photo 2">
+      <img src="photo3.jpg" alt="Couple Photo 3">
+      <img src="photo4.jpg" alt="Couple Photo 4">
+      <img src="photo5new.jpg" alt="Couple Photo 5">
+      <img src="photo6.jpg" alt="Couple Photo 1">
+      <img src="photo7new.jpg" alt="Couple Photo 2">
+      <img src="photo8new.jpg" alt="Couple Photo 3">
+      <img src="photo9new.jpg" alt="Couple Photo 4">
+      <img src="photo10.jpg" alt="Couple Photo 5">
+      <img src="photo11new.jpg" alt="Couple Photo 1">
+      <img src="photo12.jpg" alt="Couple Photo 2">
+      <img src="photo13.jpg" alt="Couple Photo 3">
+      <img src="photo14.jpg" alt="Couple Photo 4">
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const arrival = document.getElementById("arrival");
+  const departure = document.getElementById("departure");
+
+  function openToFeb2026(input) {
+    // Set the allowed range
+    input.setAttribute("min", "2026-02-06");
+    input.setAttribute("max", "2026-02-09");
+
+    // Open the calendar if supported
+    input.showPicker?.();
+  }
+
+  // Listen for focus or click on the input itself
+  [arrival, departure].forEach(input => {
+    input.addEventListener("click", () => openToFeb2026(input));
+    input.addEventListener("focus", () => openToFeb2026(input));
+  });
+</script>
+
+<script>
+  // Select the photo track
+  const track = document.getElementById('photoTrack');
+  if (track) {
+    const images = Array.from(track.children);
+
+    // Only clone once to create a seamless scroll
+    images.forEach(img => {
+      const clone = img.cloneNode(true);
+      track.appendChild(clone);
+    });
+
+    // Adjust CSS
+    track.style.width = `${track.scrollWidth}px`;
+  }
+
+</script>
+
+
 </html>
